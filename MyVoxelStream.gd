@@ -1,8 +1,8 @@
 extends VoxelStream
 
 var voxel_channel:int	= 0
-var amplitude:float = 5.0
-var period:Vector2 = Vector2(1/10.0, 1/10.0)
+var amplitude:float = 10.0
+var period:Vector2 = Vector2(1/5.0, 1/5.0)
 
 	
 func emerge_block(out_buffer:VoxelBuffer, origin:Vector3, lod:int):
@@ -21,4 +21,4 @@ func emerge_block(out_buffer:VoxelBuffer, origin:Vector3, lod:int):
 				rh = size.y
 
 			for ry in range(0, rh):
-				out_buffer.set_voxel(1, rx, ry, rz, voxel_channel);
+				out_buffer.set_voxel(2 if ry == rh else 1, rx, ry, rz, voxel_channel);
