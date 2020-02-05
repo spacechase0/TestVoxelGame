@@ -9,24 +9,24 @@ voxel_name = "dirt"
 geometry_type = 1
 collision_aabbs = [ AABB( 0, 0, 0, 1, 1, 1 ) ]
 cube_geometry/padding_y = 0.0
-cube_tiles/left = Vector2( 2, 0 )
-cube_tiles/right = Vector2( 2, 0 )
-cube_tiles/bottom = Vector2( 2, 0 )
-cube_tiles/top = Vector2( 2, 0 )
-cube_tiles/back = Vector2( 2, 0 )
-cube_tiles/front = Vector2( 2, 0 )
+cube_tiles/left = Vector2( 0, 0 )
+cube_tiles/right = Vector2( 0, 0 )
+cube_tiles/bottom = Vector2( 0, 0 )
+cube_tiles/top = Vector2( 0, 0 )
+cube_tiles/back = Vector2( 0, 0 )
+cube_tiles/front = Vector2( 0, 0 )
 
 [sub_resource type="Voxel" id=3]
 voxel_name = "grass"
 geometry_type = 1
 collision_aabbs = [ AABB( 0, 0, 0, 1, 1, 1 ) ]
 cube_geometry/padding_y = 0.0
-cube_tiles/left = Vector2( 1, 0 )
-cube_tiles/right = Vector2( 1, 0 )
-cube_tiles/bottom = Vector2( 2, 0 )
+cube_tiles/left = Vector2( 0, 0 )
+cube_tiles/right = Vector2( 0, 0 )
+cube_tiles/bottom = Vector2( 0, 0 )
 cube_tiles/top = Vector2( 0, 0 )
-cube_tiles/back = Vector2( 1, 0 )
-cube_tiles/front = Vector2( 1, 0 )
+cube_tiles/back = Vector2( 0, 0 )
+cube_tiles/front = Vector2( 0, 0 )
 
 [resource]
 voxels/0 = SubResource( 1 )

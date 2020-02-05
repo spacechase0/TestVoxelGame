@@ -15,6 +15,7 @@ background_sky = SubResource( 1 )
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_texture = ExtResource( 4 )
+uv1_triplanar = true
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 1 )

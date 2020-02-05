@@ -15,7 +15,7 @@ func emerge_block(out_buffer:VoxelBuffer, origin:Vector3, lod:int):
 			var x:float = origin.x + rx
 			var z:float = origin.z + rz
 
-			var h:int = amplitude * (cos(x * period.x) + sin(z * period.y)) # Y is correct
+			var h:int = amplitude * (cos(x * period.x) + sin(z * period.y))
 			var rh:int = h - origin.y
 			if rh > size.y:
 				rh = size.y
