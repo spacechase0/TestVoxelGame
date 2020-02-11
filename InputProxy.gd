@@ -16,6 +16,12 @@ func is_move_right_pressed() -> bool:
 
 func is_move_jump_pressed() -> bool:
 	return false
+	
+func is_act_hit_pressed() -> bool:
+	return false
+
+func is_act_interact_pressed() -> bool:
+	return false
 
 func get_camera_movement() -> Vector2:
 	var ret = lastCameraInput

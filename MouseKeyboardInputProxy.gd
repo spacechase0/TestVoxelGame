@@ -18,6 +18,12 @@ func is_move_right_pressed() -> bool:
 func is_move_jump_pressed() -> bool:
 	return Input.is_action_pressed("MOVE_JUMP")
 
+func is_act_hit_pressed() -> bool:
+	return Input.is_action_pressed("ACT_HIT")
+
+func is_act_interact_pressed() -> bool:
+	return Input.is_action_pressed("ACT_INTERACT")
+
 # New stuff
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
