@@ -15,10 +15,14 @@ func emerge_block(out_buffer:VoxelBuffer, origin:Vector3, lod:int):
 			var x:float = origin.x + rx
 			var z:float = origin.z + rz
 
-			var h:int = amplitude * (cos(x * period.x) + sin(z * period.y))
+			var h:int = 1#amplitude * (cos(x * period.x) + sin(z * period.y))
 			var rh:int = h - origin.y
 			if rh > size.y:
 				rh = size.y
 
 			for ry in range(0, rh):
 				out_buffer.set_voxel(2 if ry == rh else 1, rx, ry, rz, voxel_channel);
+			
+			if x == 1 and z == 1:
+				for ry in range(0, size.y):
+					out_buffer.set_voxel(2, rx, ry, rz, voxel_channel);
