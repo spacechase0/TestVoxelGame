@@ -5,6 +5,7 @@ const MouseKeyboardInputProxy = preload("res://MouseKeyboardInputProxy.gd")
 var cursor : RayCast = null
 var selVoxelDisplay : ImmediateGeometry = null
 var lastHit : bool = false
+var lastInteract : bool = false
 
 func _ready() -> void:
 	inputProxy = MouseKeyboardInputProxy.new()
@@ -26,10 +27,14 @@ func _process(delta) -> void:
 		
 		if inputProxy.is_act_hit_pressed() and !lastHit:
 			terrain.get_voxel_tool().set_voxel(ipos, 0)
+		elif inputProxy.is_act_interact_pressed() and !lastInteract:
+			var ppos := ipos + cursor.get_collision_normal()
+			terrain.get_voxel_tool().set_voxel(ppos, 1)
 	else:
 		selVoxelDisplay.visible = false
 	
 	lastHit = inputProxy.is_act_hit_pressed()
+	lastInteract = inputProxy.is_act_interact_pressed()
 
 func do_camera() -> void:
 	if inputProxy == null:
